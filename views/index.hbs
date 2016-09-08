@@ -1,0 +1,59 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-offset-2 col-lg-8">
+            <section class="panel panel-default">
+                <div class="panel-body">
+                    <article class="panel-body">
+                        <figure class="text-center">
+                            <img src="http://d13yacurqjgara.cloudfront.net/users/42865/screenshots/614568/devilspiritjinx.jpg"
+                                 class="img-thumbnail img-circle img-responsive" alt="me">
+                            <figcaption>
+                                <div class="auth_status">
+                                    {{#if user }}
+                                        <p>
+                                            You are currently logged in as #{{user.username}}
+                                        </p>
+                                        <a href="/logout">Logout</a>
+                                    {{else}}
+
+                                        <div id="loginWindow">
+                                            <div class="page-header">
+                                                <p class="left">
+                                                    <span class="glyphicon glyphicon-lock" aria-hidden="true"></span>
+                                                </p>
+                                                <a href="/register">Register</a>
+
+                                            </div>
+                                            <form action="/login" method="post">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon" id="basic-addon1">Username</span>
+                                                    <input type="text" class="form-control" placeholder="Username"
+                                                           aria-describedby="basic-addon1" name="username">
+                                                </div>
+                                                <div class="input-group">
+                                                    <span class="input-group-addon" id="basic-addon2">Password</span>
+                                                    <input type="password" class="form-control" placeholder="Password"
+                                                           aria-describedby="basic-addon2" name="password">
+                                                </div>
+                                                <button class="btn btn-primary" type="submit">Submit</button>
+                                                <input type="hidden" name="_csrf" value="{{csrfToken}}">
+                                            </form>
+                                        </div>
+
+                                    {{/if}}
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </article>
+                    <br>
+                    <article>
+                        <!-- jQuery/Bootstrap login window -->
+
+
+                    </article>
+
+                </div>
+            </section>
+        </div>
+    </div>
+</div>

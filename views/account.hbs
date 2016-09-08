@@ -1,0 +1,10 @@
+<div class="auth_status">
+    {{#if user }}
+        <p>
+            You are currently logged in as #{{user.username}}
+        </p>
+        <a href="/logout">Logout</a>
+    {{else}}
+        <h2>Hello!</h2>
+    {{/if}}
+</div>
